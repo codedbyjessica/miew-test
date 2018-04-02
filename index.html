@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miew via Global</title>
+  
+  <link rel="stylesheet" href="node_modules/miew/dist/Miew.min.css">
+  <script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
+  <script src="node_modules/miew/dist/Miew.min.js"></script>
+</head>
+<body>
+	<div id="miew-menu"> 
+		<div id="miew-colorers">
+			colors
+		</div>
+		<div id="miew-modes">
+			Modes
+		</div>
+	</div>
+		
+	<div class="miew-container" style="width:640px; height:480px"></div>
+
+
+
+
+  <script>
+    (function() {
+
+		var viewer = new Miew({
+			container: document.getElementsByClassName('miew-container')[0],
+			load: '1CRN',
+			reps: [{
+			  mode: 'BS',
+			}, {
+			  selector: 'elem S',
+			  mode: 'LC',
+			  material: 'TR',
+			  colorer: ['UN', { color: 0xBADA55 }],
+			}],
+			settings: {
+			  autoRotation: -0.5,
+			  theme: 'light',
+			  axes: false,
+			  fps: false,
+			},
+		  });
+
+		const modes = [
+			{
+				name: "balls",
+				code: "BS",
+			},
+			{
+				name: "cartoon",
+				code: "CA",
+			},
+			{
+				name: "contact surface",
+				code: "CS",
+			},
+			{
+				name: 'licorice',
+				code: "LC"
+			},
+			{
+				name: "lines",
+				code: "LN"
+			},
+			{
+				name: "quick surface",
+				code: "QS"
+			},
+			{
+				name: "SAS",
+				code: "SA"
+			},
+			{
+				name: "SES",
+				code: "SE"
+			},
+			{
+				name: "trace",
+				code: "TR"
+			},
+			{
+				name: "tube",
+				code: "TU"
+			},
+			{
+				name: "text",
+				code: "TX"
+			},
+			{
+				name: "VWD",
+				code: "VW"
+			}
+		]
+		const colorers = [
+			{
+				name: "conformation",
+				code: "CF"
+			},
+			{
+				name: "chain",
+				code: "CH"
+			},
+			{
+				name: "conditional",
+				code: "CO"
+			},
+			{
+				name: "element",
+				code: "EL"
+			},
+			{
+				name: "hydrophobicity",
+				code: "HY"
+			},
+			{
+				name: "molecule",
+				code: "MO"
+			},
+			{
+				name: "occupancy",
+				code: "OC"
+			},
+			{
+				name: "residue",
+				code: "RT"
+			},
+			{
+				name: "sequence",
+				code: "SQ"
+			},
+			{
+				name: "structure",
+				code: "SS"
+			},
+			{
+				name: "temperature",
+				code: "TM"
+			},
+			{
+				name: "uniform",
+				code: "UN"
+			}
+		]
+
+
+		colorers.forEach((color) => {
+			var button = document.createElement("button");
+			button.value = color.code;
+			var buttonText = document.createTextNode(color.name);
+			button.appendChild(buttonText)
+			document.getElementById("miew-colorers").appendChild(button)
+		})
+
+		modes.forEach((mode) => {
+			var button = document.createElement("button");
+			button.value = mode.code;
+
+			button.onclick = changeMode;
+
+			var buttonText = document.createTextNode(mode.name);
+			button.appendChild(buttonText)
+			document.getElementById("miew-modes").appendChild(button)
+		})
+
+		function changeMode() {
+			var mode = this.value;
+			console.log(mode)
+		}
+
+
+
+      if (viewer.init()) {
+        viewer.run();
+	  }
+	  
+
+	  
+
+
+	  
+    })();
+  </script>
+</body>
+</html>

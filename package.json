@@ -1,0 +1,41 @@
+{
+  "name": "gulp-boiler",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "plumber": "^0.4.8",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "miew": "^0.7.15"
+  },
+  "description": "simple gulp boiler with scss, babel, browsersync",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedbyjessica/gulp-boiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codedbyjessica/gulp-boiler/issues"
+  },
+  "homepage": "https://github.com/codedbyjessica/gulp-boiler#readme"
+}

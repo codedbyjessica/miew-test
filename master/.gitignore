@@ -1,0 +1,11 @@
+node_modules/
+build/
+coverage/
+.nyc_output/
+.sonar/
+.idea/workspace.xml
+.idea/tasks.xml
+test/e2e/mismatch/*.png
+test/e2e/mismatch/*.html
+!*.pdb
+*.pyc
