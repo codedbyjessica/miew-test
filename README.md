@@ -1,4 +1,4 @@
-# cant figure out how to change color or mode
+# testing miew for our basic needs :)
 
 # clone this
 # npm install
